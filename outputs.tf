@@ -1,9 +1,4 @@
-# ============================================================
-# outputs.tf
-# Exposes useful RDS resource attributes after `terraform apply`.
-# The db_password output is marked sensitive so Terraform
-# redacts it in CLI output and logs.
-# ============================================================
+
 
 output "rds_instance_id" {
   description = "The unique identifier of the RDS instance"
