@@ -1,14 +1,4 @@
-# ============================================================
-# variables.tf
-# Declares ALL input variables used across the project.
-# Grouped by: General → Networking → Engine → Instance →
-#             Credentials → Backup & Maintenance
-# ============================================================
 
-
-# -----------------------------------------------------------
-# General
-# -----------------------------------------------------------
 variable "region" {
   description = "AWS region where all resources will be deployed"
   type        = string
@@ -16,9 +6,9 @@ variable "region" {
 }
 
 
-# -----------------------------------------------------------
+
 # Networking
-# -----------------------------------------------------------
+
 variable "vpc_id" {
   description = "ID of the existing VPC where the RDS instance will be deployed"
   type        = string
@@ -32,9 +22,9 @@ variable "subnet_ids" {
 }
 
 
-# -----------------------------------------------------------
+
 # RDS Engine
-# -----------------------------------------------------------
+
 variable "db_engine" {
   description = "Database engine to use (e.g. postgres, mysql, mariadb)"
   type        = string
@@ -54,9 +44,9 @@ variable "db_engine_pggroup" {
 }
 
 
-# -----------------------------------------------------------
+
 # RDS Instance
-# -----------------------------------------------------------
+
 variable "db_instance_class" {
   description = "RDS instance class (e.g. db.t3.micro, db.t3.medium)"
   type        = string
@@ -70,9 +60,7 @@ variable "allocated_storage" {
 }
 
 
-# -----------------------------------------------------------
 # Database Credentials
-# -----------------------------------------------------------
 variable "db_name" {
   description = "Name of the initial database to create inside the RDS instance"
   type        = string
@@ -92,9 +80,9 @@ variable "db_password" {
 }
 
 
-# -----------------------------------------------------------
+
 # Backup & Maintenance
-# -----------------------------------------------------------
+
 variable "db_backup_retention_period" {
   description = "Number of days to retain automated backups (0 disables backups)"
   type        = number
